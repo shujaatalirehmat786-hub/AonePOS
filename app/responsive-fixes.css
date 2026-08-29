@@ -1,0 +1,802 @@
+/* Final layout layer: one spacing system and non-overlapping breakpoints. */
+:root {
+  --rp-section-space: 112px;
+}
+
+.rp-container {
+  width: min(1380px, 82%);
+}
+
+main > section[id],
+.rp-page[id] {
+  scroll-margin-top: 96px;
+}
+
+.rp-header {
+  height: 112px;
+}
+
+.rp-nav {
+  gap: clamp(24px, 3vw, 54px);
+}
+
+.rp-logo {
+  flex: 0 0 auto;
+  width: 220px;
+}
+
+.rp-logo img {
+  width: 220px;
+  height: 70px;
+}
+
+.rp-nav nav {
+  gap: clamp(24px, 3vw, 58px);
+}
+
+.rp-products-menu > div {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+
+.rp-products-menu:hover > div,
+.rp-products-menu:focus-within > div {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.rp-hero {
+  min-height: 810px;
+}
+
+.rp-hero-inner {
+  grid-template-columns: minmax(0, 46%) minmax(0, 54%);
+  gap: 24px;
+  padding-top: 94px;
+}
+
+.rp-hero h1 {
+  font-size: clamp(52px, 3.55vw, 58px);
+}
+
+.rp-hero-art {
+  width: 100%;
+  height: 600px;
+}
+
+.rp-dashboard {
+  left: 13%;
+  width: min(690px, 92%);
+}
+
+.rp-score {
+  left: 0;
+}
+
+.rp-payment {
+  right: -3%;
+}
+
+/* Exact exported Figma composite for the hero dashboard and its floating cards. */
+.rp-hero-dashboard-image {
+  position: absolute;
+  z-index: 2;
+  top: 58px;
+  left: 42px;
+  display: block;
+  width: 665px;
+  max-width: none;
+  height: auto;
+  clip-path: inset(3px);
+}
+
+.rp-partners {
+  padding: 82px 0 96px;
+}
+
+.rp-partners h2 {
+  margin-bottom: 58px;
+}
+
+.rp-why,
+.rp-insights,
+.rp-dashboard-section,
+.rp-solutions,
+.rp-pricing,
+.rp-faq,
+.rp-cta {
+  padding-top: var(--rp-section-space);
+  padding-bottom: var(--rp-section-space);
+}
+
+.rp-why h2,
+.rp-section-head h2,
+.rp-cta h2 {
+  font-size: clamp(42px, 3.35vw, 52px);
+}
+
+.rp-two-col {
+  gap: clamp(55px, 6vw, 90px);
+}
+
+.rp-retail-art {
+  height: 555px;
+}
+
+.rp-shop-card {
+  right: -20px;
+}
+
+.rp-insight-grid,
+.rp-solution-grid,
+.rp-plan-grid {
+  margin-top: 60px;
+}
+
+.rp-insight-grid article {
+  min-height: 235px;
+}
+
+.rp-pos-screen {
+  width: min(1130px, 100%);
+  margin-top: 62px;
+}
+
+.rp-dashboard-image {
+  width: min(1130px, 100%);
+  margin: 62px auto 0;
+}
+
+.rp-dashboard-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rp-pos-body {
+  min-height: 530px;
+}
+
+.rp-solution-grid > article,
+.rp-plan-grid article {
+  height: 100%;
+}
+
+.rp-plan-grid article {
+  display: flex;
+  flex-direction: column;
+}
+
+.rp-plan-grid ul {
+  margin-bottom: 12px;
+}
+
+.rp-plan-top {
+  min-height: 285px;
+}
+
+.rp-plan-top strong {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.rp-faq-list {
+  margin-top: 58px;
+}
+
+.rp-faq-list button > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.rp-faq-list button > span::after {
+  content: "+";
+  flex: none;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.rp-faq-list button.active > span::after {
+  content: "−";
+}
+
+.rp-cta-box {
+  min-height: 450px;
+  padding: 76px 50px;
+}
+
+.rp-footer {
+  padding-top: 76px;
+}
+
+.rp-footer-brand {
+  padding-bottom: 52px;
+}
+
+.rp-footer-logo {
+  display: block;
+  width: 270px;
+  height: auto;
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
+}
+
+.rp-footer-grid {
+  padding: 58px 0 64px;
+}
+
+/* The supplied Figma desktop state shows the product flyout open. */
+@media (min-width: 1500px) {
+  .rp-products-menu > div {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+/* Compact desktop: preserve the two-column hero without clipping artwork. */
+@media (max-width: 1499px) and (min-width: 1181px) {
+  .rp-desktop-demo {
+    min-width: 205px;
+  }
+
+  .rp-hero {
+    min-height: 780px;
+  }
+
+  .rp-hero-inner {
+    grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+    gap: 10px;
+    padding-top: 78px;
+  }
+
+  .rp-hero h1 {
+    font-size: clamp(48px, 3.7vw, 56px);
+    letter-spacing: -2px;
+  }
+
+  .rp-hero-copy > p {
+    max-width: 555px;
+  }
+
+  .rp-hero-art {
+    width: 121%;
+    height: 615px;
+    transform: scale(.82);
+    transform-origin: left top;
+  }
+
+  .rp-stats > div {
+    padding-inline: 22px;
+  }
+
+  .rp-stats strong {
+    font-size: 32px;
+  }
+
+  .rp-plan-grid {
+    gap: 22px;
+  }
+
+  .rp-plan-top {
+    padding-inline: 26px;
+  }
+
+  .rp-plan-top strong {
+    font-size: 46px;
+  }
+}
+
+/* Tablet and small laptop. */
+@media (max-width: 1180px) {
+  :root {
+    --rp-section-space: 88px;
+  }
+
+  .rp-container {
+    width: min(920px, calc(100% - 48px));
+  }
+
+  .rp-desktop-demo {
+    display: none;
+  }
+
+  .rp-hero {
+    min-height: 0;
+  }
+
+  .rp-hero-inner {
+    grid-template-columns: 1fr;
+    padding-top: 76px;
+    padding-bottom: 70px;
+  }
+
+  .rp-hero-copy {
+    text-align: center;
+  }
+
+  .rp-hero-copy > p {
+    margin-inline: auto;
+  }
+
+  .rp-actions,
+  .rp-stats {
+    justify-content: center;
+  }
+
+  .rp-hero-art {
+    width: 760px;
+    max-width: 100%;
+    margin: 20px auto 0;
+  }
+
+  .rp-partners .rp-container > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 34px 56px;
+  }
+
+  .rp-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .rp-retail-art {
+    width: min(700px, 100%);
+    margin-inline: auto;
+  }
+
+  .rp-plan-grid {
+    gap: 18px;
+  }
+
+  .rp-plan-top {
+    min-height: 255px;
+    padding: 32px 20px 40px;
+  }
+
+  .rp-plan-top strong {
+    font-size: 40px;
+  }
+
+  .rp-plan-top em {
+    margin-left: 8px;
+  }
+
+  .rp-footer-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .rp-footer-grid > div:last-child {
+    grid-column: 1 / -1;
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+/* Move the full navigation into the menu before it becomes cramped. */
+@media (max-width: 1049px) {
+  .rp-header {
+    height: 88px;
+  }
+
+  .rp-logo img {
+    width: 190px;
+    height: 60px;
+  }
+
+  .rp-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .rp-nav nav {
+    display: none;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 18px 24px 24px;
+    background: #fff;
+    border-bottom: 1px solid #d8eaf0;
+    box-shadow: 0 14px 30px #183b4617;
+  }
+
+  .rp-nav nav.open {
+    display: flex;
+  }
+
+  .rp-nav nav > a,
+  .rp-products-menu > button {
+    width: 100%;
+    padding: 13px 4px;
+    text-align: left;
+  }
+
+  .rp-products-menu > div {
+    position: static;
+    width: 100%;
+    padding: 6px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .rp-products-menu > div a {
+    height: 48px;
+  }
+
+  .rp-solution-grid,
+  .rp-plan-grid {
+    grid-template-columns: 1fr;
+    width: min(680px, 100%);
+    margin-inline: auto;
+    margin-top: 52px;
+  }
+
+  .rp-plan-top {
+    min-height: 0;
+  }
+}
+
+/* Phone. */
+@media (max-width: 760px) {
+  :root {
+    --rp-section-space: 68px;
+  }
+
+  .rp-container {
+    width: calc(100% - 32px);
+  }
+
+  .rp-header {
+    height: 78px;
+  }
+
+  .rp-logo {
+    width: auto;
+  }
+
+  .rp-logo img {
+    width: 164px;
+    height: 52px;
+  }
+
+  .rp-nav nav {
+    top: 78px;
+  }
+
+  .rp-hero-inner {
+    display: block;
+    padding: 46px 0 58px;
+  }
+
+  .rp-hero h1 {
+    margin: 25px 0 20px;
+    font-size: clamp(38px, 11vw, 45px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+  }
+
+  .rp-pill {
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  .rp-pill .rp-arrow {
+    margin-left: 20px;
+  }
+
+  .rp-hero-copy > p,
+  .rp-why .rp-two-col > div:first-child > p,
+  .rp-section-head > p,
+  .rp-cta p {
+    font-size: 15px;
+  }
+
+  .rp-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .rp-primary,
+  .rp-secondary {
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+  }
+
+  .rp-stats {
+    margin-top: 48px;
+  }
+
+  .rp-stats > div {
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  .rp-stats strong {
+    font-size: clamp(22px, 7vw, 27px);
+  }
+
+  .rp-stats span {
+    margin-top: 9px;
+    font-size: 10px;
+  }
+
+  .rp-hero-art {
+    height: 335px;
+    margin-top: 42px;
+  }
+
+  .rp-dashboard {
+    left: 4px;
+    width: 690px;
+    transform: scale(.49);
+    transform-origin: top left;
+  }
+
+  .rp-hero-dashboard-image {
+    top: 42px;
+    left: 50%;
+    width: 540px;
+    transform: translateX(-50%);
+  }
+
+  .rp-score {
+    left: -4px;
+    top: 164px;
+    transform: scale(.68);
+    transform-origin: left top;
+  }
+
+  .rp-payment {
+    right: -14px;
+    top: 144px;
+    transform: scale(.68);
+    transform-origin: right top;
+  }
+
+  .rp-art-circle.one {
+    width: 90px;
+    height: 90px;
+  }
+
+  .rp-art-circle.two {
+    width: 190px;
+    height: 190px;
+  }
+
+  .rp-partners {
+    padding: 62px 0 70px;
+  }
+
+  .rp-partners h2 {
+    margin-bottom: 42px;
+    font-size: 26px;
+  }
+
+  .rp-partners .rp-container > div {
+    gap: 30px 36px;
+    font-size: 28px;
+  }
+
+  .rp-why h2,
+  .rp-section-head h2,
+  .rp-cta h2 {
+    font-size: clamp(32px, 9vw, 38px);
+    letter-spacing: -1px;
+  }
+
+  .rp-benefit {
+    gap: 16px;
+  }
+
+  .rp-retail-art {
+    height: 450px;
+  }
+
+  .rp-payment.retail {
+    left: 12px;
+    top: 45px;
+    width: 235px;
+    padding: 20px;
+  }
+
+  .rp-shop-card {
+    top: 115px;
+    right: 14px;
+    width: 270px;
+    padding: 22px;
+  }
+
+  .rp-shop-card .rp-receipt {
+    padding: 10px;
+  }
+
+  .rp-shop-card .rp-receipt > div {
+    gap: 9px;
+    font-size: 13px;
+  }
+
+  .rp-shop-card .rp-thumb {
+    width: 32px;
+    height: 32px;
+  }
+
+  .rp-insight-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 42px;
+  }
+
+  .rp-insight-grid article {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .rp-pos-screen {
+    margin-top: 42px;
+    overflow: hidden;
+  }
+
+  .rp-dashboard-image {
+    margin-top: 42px;
+  }
+
+  .rp-pos-body {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .rp-products {
+    padding: 16px;
+  }
+
+  .rp-customer {
+    flex-wrap: wrap;
+  }
+
+  .rp-customer span {
+    order: 3;
+    width: 100%;
+    margin: 0;
+  }
+
+  .rp-search {
+    width: 100%;
+    margin-top: 22px;
+  }
+
+  .rp-tabs {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .rp-product-grid > div:nth-child(n+5) {
+    display: none;
+  }
+
+  .rp-invoice {
+    border-top: 1px solid #edf2f3;
+    border-left: 0;
+  }
+
+  .rp-invoice > button {
+    color: #fff;
+    text-align: center;
+  }
+
+  .rp-hold {
+    white-space: normal;
+    line-height: 1.45;
+  }
+
+  .rp-solution-grid,
+  .rp-plan-grid {
+    margin-top: 42px;
+  }
+
+  .rp-solution-grid > article,
+  .rp-plan-grid article {
+    border-radius: 20px;
+  }
+
+  .rp-solution-grid > article {
+    padding: 25px;
+  }
+
+  .rp-solution-grid h3 {
+    font-size: 25px;
+  }
+
+  .rp-toggle {
+    margin-top: 32px;
+  }
+
+  .rp-toggle button {
+    padding: 11px 28px;
+  }
+
+  .rp-plan-top strong {
+    font-size: 44px;
+  }
+
+  .rp-faq-list {
+    margin-top: 42px;
+  }
+
+  .rp-faq-list button {
+    margin: 14px 0;
+    padding: 22px;
+    font-size: 17px;
+  }
+
+  .rp-faq-list button.active > span {
+    margin: -22px -22px 0;
+    padding: 22px;
+  }
+
+  .rp-cta-box {
+    min-height: 0;
+    padding: 58px 22px;
+    border-radius: 28px;
+  }
+
+  .rp-footer {
+    padding-top: 60px;
+  }
+
+  .rp-footer-brand {
+    padding-bottom: 38px;
+  }
+
+  .rp-footer-logo {
+    width: 220px;
+  }
+
+  .rp-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 42px 0 48px;
+  }
+
+  .rp-footer-grid > div + div {
+    padding-top: 34px;
+    padding-left: 0;
+    border-top: 1px solid #ffffff40;
+    border-left: 0;
+  }
+
+  .rp-footer-grid > div:last-child {
+    grid-column: auto;
+  }
+
+  .rp-copyright {
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 390px) {
+  .rp-dashboard {
+    transform: scale(.465);
+  }
+
+  .rp-stats > div {
+    padding-inline: 8px;
+  }
+}

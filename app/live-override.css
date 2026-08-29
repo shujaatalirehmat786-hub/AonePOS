@@ -1,0 +1,11 @@
+/* Final live layout overrides. The Figma reference is not used as page content. */
+@media (min-width: 801px) {
+  body { overflow-x: hidden; }
+  .nav { position: relative; top: auto; left: auto; right: auto; background: #e6f8fd; }
+  .nav > * { visibility: visible; }
+  .hero { height: auto; min-height: 746px; background: #e6f8fd; }
+  .hero > .system { display: flex; }
+  .hero-art .dashboard-wrap { width: 610px; height: 450px; left: 106px; top: 37px; background: none; }
+  .hero-art .dashboard-wrap > * { display: block !important; }
+  .hero-art .dashboard-wrap .dash-device { display: block !important; }
+}
