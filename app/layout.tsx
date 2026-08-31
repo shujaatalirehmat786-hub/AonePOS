@@ -7,6 +7,7 @@ import "./pricing-fix.css";
 import "./home-polish.css";
 import "./hero-assets.css";
 import "./footer-final.css";
+import "./solution-assets.css";
 
 export const metadata: Metadata = { title: "AONEPOS — Start and grow your business", description: "The complete POS platform for modern businesses." };
 
