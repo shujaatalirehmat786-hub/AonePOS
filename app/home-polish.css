@@ -1,0 +1,9 @@
+/* Figma first-viewport polish: the reference uses an airy edge-to-edge partner rail. */
+.rp-logo-marquee{width:100%;overflow:hidden;margin-top:-2px;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.rp-logo-track{display:flex;align-items:center;width:max-content;gap:90px;padding:10px 42px;animation:partner-slide 30s linear infinite}
+.rp-logo-marquee:hover .rp-logo-track,.rp-logo-marquee:focus-within .rp-logo-track{animation-play-state:paused}
+.rp-partner-logo{width:145px;flex:0 0 145px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#9ea3a5;filter:grayscale(1);opacity:.9;white-space:nowrap}
+.rp-partner-logo b{font-family:Arial,sans-serif;font-size:26px;line-height:1;font-weight:800;letter-spacing:-1.4px;font-style:italic}.rp-partner-logo small{font-size:7px;line-height:1.2;margin-top:4px;font-weight:500;letter-spacing:.1px}.rp-partner-logo.logo-1 b{font-size:22px;letter-spacing:-2px}.rp-partner-logo.logo-2 b{font-size:23px;font-style:normal}.rp-partner-logo.logo-3 b{font-size:29px;font-style:normal;font-weight:500;letter-spacing:-2px}.rp-partner-logo.logo-4 b{font-size:25px;font-style:normal;letter-spacing:-1px}.rp-partner-logo.logo-6 b{font-size:27px;font-style:normal;letter-spacing:-2px}
+@keyframes partner-slide{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 45px))}}
+@media(max-width:1100px){.rp-logo-track{gap:52px}.rp-partner-logo{width:125px;flex-basis:125px}.rp-partners .rp-container>div{display:none}}
+@media(max-width:760px){.rp-logo-track{gap:34px;padding-inline:20px;animation-duration:24s}.rp-partner-logo{width:105px;flex-basis:105px}.rp-partner-logo b{font-size:20px}.rp-partners .rp-container>div{display:none}}
