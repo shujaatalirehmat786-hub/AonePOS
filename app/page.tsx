@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const productMenu = [["tablet", "Tablet POS"], ["mobile", "Mobile POS"], ["web", "Web POS"]];
 const faqs = [
@@ -29,10 +29,10 @@ function DashboardArt() {
 function DashboardImage() {
   return <figure className="rp-dashboard-image">
     <img
-      src="/assets/pos-dashboard.png"
+      src="/assets/figma-invoice-dashboard.png"
       alt="AONEPOS point-of-sale dashboard showing products, invoices, stock, totals and payment controls"
-      width="4370"
-      height="2759"
+      width="1024"
+      height="649"
     />
   </figure>;
 }
@@ -43,9 +43,17 @@ function Receipt({ restaurant = false }: { restaurant?: boolean }) {
 }
 
 export default function Page() {
-  const [menuOpen,setMenuOpen] = useState(false), [monthly,setMonthly] = useState(true), [openFaq,setOpenFaq] = useState(1);
+  const [menuOpen,setMenuOpen] = useState(false), [productsOpen,setProductsOpen] = useState(false), [monthly,setMonthly] = useState(true), [openFaq,setOpenFaq] = useState(1);
+  useEffect(() => {
+    const items = document.querySelectorAll<HTMLElement>(".rp-partners, .rp-why, .rp-insights, .rp-dashboard-section, .rp-solutions, .rp-pricing, .rp-faq, .rp-cta");
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    items.forEach(item => observer.observe(item));
+    return () => observer.disconnect();
+  }, []);
   return <div className="rp-page" id="home">
-    <header className="rp-header"><div className="rp-container rp-nav"><Logo/><button className="rp-menu" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button><nav className={menuOpen ? "open" : ""}><a href="#home" onClick={()=>setMenuOpen(false)}>Home</a><div className="rp-products-menu"><button aria-haspopup="true">Products⌄</button><div>{productMenu.map(([icon,label])=><a href="#solutions" key={label} onClick={()=>setMenuOpen(false)}><i className={icon}/>{label}</a>)}</div></div><a href="#why" onClick={()=>setMenuOpen(false)}>Solutions⌄</a><a href="#pricing" onClick={()=>setMenuOpen(false)}>Pricing</a><a href="#about" onClick={()=>setMenuOpen(false)}>About</a><a href="#contact" onClick={()=>setMenuOpen(false)}>Contact</a></nav><a className="rp-demo rp-desktop-demo" href="#contact">Book For Demo <Arrow dark/></a></div></header>
+    <header className="rp-header"><div className="rp-container rp-nav"><Logo/><button className="rp-menu" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>☰</button><nav className={menuOpen ? "open" : ""}><a href="#home" onClick={()=>setMenuOpen(false)}>Home</a><div className={`rp-products-menu ${productsOpen ? "open" : ""}`}><button aria-haspopup="true" aria-expanded={productsOpen} onClick={()=>setProductsOpen(!productsOpen)}>Products⌄</button><div>{productMenu.map(([icon,label])=><a href="#solutions" key={label} onClick={()=>{setMenuOpen(false);setProductsOpen(false)}}><i className={icon}/>{label}</a>)}</div></div><a href="#why" onClick={()=>setMenuOpen(false)}>Solutions⌄</a><a href="#pricing" onClick={()=>setMenuOpen(false)}>Pricing</a><a href="#about" onClick={()=>setMenuOpen(false)}>About</a><a href="#contact" onClick={()=>setMenuOpen(false)}>Contact</a></nav><a className="rp-demo rp-desktop-demo" href="#contact">Book For Demo <Arrow dark/></a></div></header>
     <main>
       <section className="rp-hero"><div className="rp-container rp-hero-inner"><div className="rp-hero-copy"><span className="rp-pill">All-in-one POS platform <Arrow/></span><h1>One System Every Part<br/>Of Your <span>Business.</span></h1><p>Run your retail business with one powerful POS platform built to simplify checkout, inventory, reporting, customer management and multi-location operations.</p><div className="rp-actions"><a className="rp-primary" href="#contact">Book For Demo <Arrow dark/></a><a className="rp-secondary" href="#pricing">See Pricing <Arrow/></a></div><div className="rp-stats"><div><strong>10+</strong><span>Integrated modules</span></div><div><strong>3</strong><span>POS platforms</span></div><div><strong>Real-Time</strong><span>Reports & analytics</span></div></div></div><DashboardArt/></div></section>
       <section className="rp-partners"><div className="rp-container"><h2>Our Businesses Partners Worldwide</h2><div><span>KYWELL<small>more than a Printer</small></span><span>PARTNER<small>CARE · TRUST · RESPONSIBILITY</small></span><span>◉ PAX<small>Empowering Digital Payments</small></span><span>stark<small>microincs</small></span><span>EPSON</span></div></div></section>
@@ -57,6 +65,6 @@ export default function Page() {
       <section className="rp-faq"><div className="rp-container"><div className="rp-section-head"><span className="rp-label">FAQ’S</span><h2>Frequently Asked Questions</h2><p>Unlock real-time insights that help you grow smarter and faster. From sales trends to inventory performance, AONEPOS gives you the clarity.</p></div><div className="rp-faq-list">{faqs.map(([q,a],i)=><button className={openFaq===i?"active":""} onClick={()=>setOpenFaq(openFaq===i?-1:i)} key={q} aria-expanded={openFaq===i}><span>{q}</span>{openFaq===i&&<small>{a}</small>}</button>)}</div></div></section>
       <section className="rp-cta" id="contact"><div className="rp-container"><div className="rp-cta-box"><span className="rp-label">GET STARTED WITH AONEPOS</span><h2>Ready To Transform Your Business?</h2><p>See how AONEPOS can simplify your operations, boost sales and help your business grow. We’re here to help you get started, step by step.</p><div className="rp-actions"><a className="rp-primary" href="mailto:info@aonepos.com">Start Free 30-Day Trial <Arrow dark/></a><a className="rp-secondary" href="mailto:info@aonepos.com">Book A Demo <Arrow/></a></div></div></div></section>
     </main>
-    <footer className="rp-footer"><div className="rp-container"><div className="rp-footer-brand"><img className="rp-footer-logo" src="/assets/aonepos-logo.png" alt="AOnePOS"/></div><div className="rp-footer-grid"><div><h3>Social Links</h3><div className="rp-social"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Twitter">♥</a><a href="#" aria-label="LinkedIn">in</a></div></div><div><h3>About</h3><p>At AONEPOS, We Are Committed To Simplifying And Optimizing The Way Businesses Operate. Our All-In-One POS Solution Empowers Retailers And Restaurants With Fast Sales Processing, Real-Time Inventory Tracking, Multi-Location Management, And Cloud-Based Access — All Designed To Help You Grow Smarter And Faster.</p></div><div><h3>Link</h3><nav><a href="#home">Home</a><a href="#solutions">Products</a><a href="#why">Solutions</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></div></div><div className="rp-copyright"><div className="rp-container">© Copyright © 2026 Aonepos. All Rights Reserved.</div></div></footer>
+    <footer className="rp-footer"><div className="rp-container"><div className="rp-footer-brand"><img className="rp-footer-logo" src="/assets/aonepos-logo.png" alt="AOnePOS"/></div><div className="rp-footer-grid"><div><h3>Social Links</h3><div className="rp-social"><a href="#" aria-label="Instagram">◎</a><a className="filled" href="#" aria-label="Facebook">f</a><a href="#" aria-label="Twitter">♥</a><a href="#" aria-label="LinkedIn">in</a></div></div><div><h3>About</h3><p>At AONEPOS, We Are Committed To Simplifying And Optimizing The Way Businesses Operate. Our All-In-One POS Solution Empowers Retailers And Restaurants With Fast Sales Processing, Real-Time Inventory Tracking, Multi-Location Management, And Cloud-Based Access — All Designed To Help You Grow Smarter And Faster.</p></div><div><h3>Link</h3><nav><a href="#home">Home</a><a href="#solutions">Products</a><a href="#why">Solutions</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div><div className="rp-footer-contact"><h3>Contact</h3><p><span>⌖</span>2727 Lyndon B Johnson Fwy #1050,<br/>Dallas, TX 75234</p><p><span>◔</span>+866-882-4292</p><p><span>✉</span>info@aonepos.com</p></div></div></div><div className="rp-copyright"><div className="rp-container"><span>© Copyright © 2026 Aonepos. All Rights Reserved.</span><div><a href="#contact">Privacy Policy</a><a href="#contact">Terms &amp; Conditions</a></div></div></div></footer>
   </div>;
 }

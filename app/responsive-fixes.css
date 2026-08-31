@@ -147,8 +147,9 @@ main > section[id],
 }
 
 .rp-dashboard-image {
-  width: min(1130px, 100%);
+  width: min(1050px, 100%);
   margin: 62px auto 0;
+  box-shadow: 0 4px 21px rgba(0,0,0,.1);
 }
 
 .rp-dashboard-image img {
@@ -799,4 +800,37 @@ main > section[id],
   .rp-stats > div {
     padding-inline: 8px;
   }
+}
+
+/* Scroll choreography: reveal each Figma section as it enters the viewport. */
+.rp-partners,
+.rp-why,
+.rp-insights,
+.rp-dashboard-section,
+.rp-solutions,
+.rp-pricing,
+.rp-faq,
+.rp-cta {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .75s ease, transform .75s cubic-bezier(.22,1,.36,1);
+}
+.rp-partners.is-visible,
+.rp-why.is-visible,
+.rp-insights.is-visible,
+.rp-dashboard-section.is-visible,
+.rp-solutions.is-visible,
+.rp-pricing.is-visible,
+.rp-faq.is-visible,
+.rp-cta.is-visible { opacity: 1; transform: none; }
+.rp-insight-grid article,
+.rp-solution-grid article,
+.rp-plan-grid article { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease; }
+.rp-insight-grid article:hover,
+.rp-solution-grid article:hover,
+.rp-plan-grid article:hover { transform: translateY(-8px); box-shadow: 0 20px 44px #1d6f8518; }
+.rp-products-menu.open > div { opacity: 1; visibility: visible; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .rp-partners,.rp-why,.rp-insights,.rp-dashboard-section,.rp-solutions,.rp-pricing,.rp-faq,.rp-cta { opacity: 1; transform: none; transition: none; }
+  *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
