@@ -1,0 +1,15 @@
+/* Final footer pass against the supplied Figma captures. */
+.rp-footer,.inner-footer,.contact-footer{min-height:0;padding-top:76px}
+.rp-footer-brand,.inner-footer-brand{height:137px;padding-bottom:47px;align-items:center}
+.contact-footer-brand{height:137px;padding-bottom:47px}.contact-footer .contact-footer-brand img{display:block;content:url('/assets/aonepos-footer-logo.png');filter:none;width:220px;height:auto}
+.rp-footer-logo,.inner-footer-brand img,.contact-footer-brand img{display:block;content:url('/assets/aonepos-footer-logo.png');filter:none;width:220px;height:auto}
+.rp-footer-brand:before,.inner-footer-brand:before{display:none}
+.rp-footer-grid,.inner-footer-grid{padding-top:45px;padding-bottom:40px}
+.contact-footer-grid{padding-top:45px;padding-bottom:40px}
+.rp-footer-grid>div,.inner-footer-grid>div{min-height:170px}
+.rp-copyright{height:42px}.rp-copyright>.rp-container{min-height:42px}
+.inner-copyright{height:42px}.inner-copyright>.inner-container{min-height:42px}
+.contact-copyright{height:42px}.contact-copyright>.contact-container{min-height:42px}
+.rp-footer-contact p span{font-size:0;width:21px;height:21px;background-size:contain;background-repeat:no-repeat;background-position:center}.rp-footer-contact p:nth-of-type(1) span{background-image:url('/assets/footer-location.png')}.rp-footer-contact p:nth-of-type(2) span{background-image:url('/assets/footer-phone.png')}.rp-footer-contact p:nth-of-type(3) span{background-image:url('/assets/footer-email.png')}
+.inner-footer-grid>div:last-child p,.contact-footer-grid>div:last-child p{position:relative;padding-left:27px}.inner-footer-grid>div:last-child p:before,.contact-footer-grid>div:last-child p:before{content:'';position:absolute;left:0;top:2px;width:19px;height:19px;background-size:contain;background-position:center;background-repeat:no-repeat}.inner-footer-grid>div:last-child p:first-of-type:before,.contact-footer-grid>div:last-child p:first-of-type:before{background-image:url('/assets/footer-location.png')}.inner-footer-grid>div:last-child p:nth-of-type(2):before,.contact-footer-grid>div:last-child p:nth-of-type(2):before{background-image:url('/assets/footer-phone.png')}.inner-footer-grid>div:last-child p:nth-of-type(3):before,.contact-footer-grid>div:last-child p:nth-of-type(3):before{background-image:url('/assets/footer-email.png')}
+@media(max-width:760px){.rp-footer,.inner-footer,.contact-footer{padding-top:54px}.rp-footer-brand,.inner-footer-brand,.contact-footer-brand{height:96px;padding-bottom:32px}.rp-footer-logo,.inner-footer-brand img,.contact-footer .contact-footer-brand img{width:190px}.rp-footer-grid,.inner-footer-grid,.contact-footer-grid{padding-top:34px;padding-bottom:8px}.rp-copyright,.inner-copyright,.contact-copyright{height:auto;min-height:48px;padding:7px 0}}

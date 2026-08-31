@@ -24,6 +24,8 @@ function DashboardArt() {
   return <div className="rp-hero-art" aria-label="AONEPOS analytics dashboard preview">
     <div className="rp-art-circle one"/><div className="rp-art-circle two"/><div className="rp-dot-grid"/>
     <img className="rp-hero-dashboard-image" src="/assets/figma-dashboard.jpg" alt="AONEPOS analytics dashboard showing sales metrics, charts, application funnel, and traffic sources" />
+    <div className="rp-score" aria-label="Assessment score"><small>Assessment Score</small><strong>2.579 <em>views</em></strong><div><i style={{height:"56%"}}/><i style={{height:"76%"}}/><i style={{height:"42%"}}/><i style={{height:"90%"}}/><i style={{height:"68%"}}/></div></div>
+    <div className="rp-payment" aria-label="Payment successful"><b>✓</b><span><small>Payment Successful</small><strong>+$250.00</strong><em>Payment #1032<br/>Today, 3:30 PM</em></span></div>
   </div>;
 }
 
