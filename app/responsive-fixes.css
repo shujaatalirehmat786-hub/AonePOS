@@ -243,7 +243,7 @@ main > section[id],
 }
 
 /* Compact desktop: preserve the two-column hero without clipping artwork. */
-@media (max-width: 1499px) and (min-width: 1181px) {
+@media (max-width: 1499px) and (min-width: 900px) {
   .rp-desktop-demo {
     min-width: 205px;
   }
@@ -296,7 +296,7 @@ main > section[id],
 }
 
 /* Tablet and small laptop. */
-@media (max-width: 1180px) {
+@media (max-width: 899px) {
   :root {
     --rp-section-space: 88px;
   }
@@ -382,7 +382,7 @@ main > section[id],
 }
 
 /* Move the full navigation into the menu before it becomes cramped. */
-@media (max-width: 1049px) {
+@media (max-width: 899px) {
   .rp-header {
     height: 88px;
   }

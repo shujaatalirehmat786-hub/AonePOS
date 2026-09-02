@@ -1,0 +1,65 @@
+.rp-trust-line{font-size:14px!important;color:#4f7078!important;margin-top:20px}.rp-stats small{display:block;color:#66747a;font-size:12px;margin-top:5px}.rp-partner-copy{max-width:850px;margin:-28px auto 45px;color:#66747a;font-size:16px;line-height:1.6}.rp-hardware-cta{display:block;width:max-content;margin:25px auto 0;color:#19a9b5;font-size:16px;font-weight:600}.rp-benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:58px}.rp-benefit-card{border:1px solid #dcebed;border-radius:14px;padding:26px;background:#fff;transition:transform .3s,box-shadow .3s}.rp-benefit-card:hover{transform:translateY(-5px);box-shadow:0 15px 28px #315a6817}.rp-benefit-card>i{display:grid;place-items:center;width:39px;height:39px;border-radius:8px;background:#effaff;color:#41bdb6;font-style:normal;font-weight:600}.rp-benefit-card h3{font-size:19px;line-height:1.3;margin:18px 0 9px}.rp-benefit-card p{font-size:13px;line-height:1.6;color:#66747a;margin:0}.rp-support-line{margin:24px auto 17px!important}.rp-pricing-table{margin:60px auto 0;border-top:1px solid #55c9bd;max-width:1120px}.rp-pricing-table-head,.rp-pricing-row{display:grid;grid-template-columns:1fr 1fr 1.55fr 2.45fr;gap:20px;padding:17px 12px;line-height:1.5}.rp-pricing-table-head{background:#0d4741;color:#fff}.rp-pricing-row{border-bottom:1px solid #7ed7cf;font-size:14px;color:#28383a}.rp-pricing-row:nth-child(3){background:#effcfb}.rp-pricing-row span{display:block}.rp-price-notes{max-width:1120px;background:#effcfb;border-left:6px solid #0d4741;padding:16px 20px;margin:28px auto 0;color:#42585b;font-size:14px;line-height:1.6}.rp-reassurance{display:block;position:relative;z-index:1;margin-top:23px;color:#5b757a;font-size:13px}.rp-toggle small{font-size:11px;margin-left:4px}.rp-solution-grid>article .text-link{margin-top:22px;display:inline-flex}
+.inner-footer-tagline,.inner-footer-seo{display:none}.rp-footer-tagline{display:none}
+.rp-extra-benefits{margin-top:22px}.rp-extra-benefits details,.rp-solution-more{border-top:1px solid #dcebed;padding:13px 0;color:#56656a}.rp-extra-benefits summary,.rp-solution-more summary{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none;font-size:14px}.rp-extra-benefits summary::-webkit-details-marker,.rp-solution-more summary::-webkit-details-marker{display:none}.rp-extra-benefits summary i{font-style:normal;color:#4bc7c1;background:#effaff;border-radius:7px;width:38px;height:38px;display:grid;place-items:center}.rp-extra-benefits summary strong{font-size:15px}.rp-extra-benefits details p,.rp-solution-more p,.rp-solution-more li{font-size:13px;line-height:1.55;color:#66747a;margin:11px 0 0 50px}.rp-solution-more{margin-top:25px;background:#fff;border-radius:12px;padding:18px 24px;box-shadow:0 9px 25px #345a6810}.rp-solution-more summary{justify-content:space-between;font-weight:600}.rp-solution-more summary span{color:#1aa9b6;font-weight:500}.rp-solution-more ul{margin:10px 0 0 50px;padding-left:16px}.rp-solution-more .text-link{margin-left:50px}.rp-price-notes{background:#effcfb;border-left:5px solid #0d4741;padding:13px 20px;margin:31px auto 0;color:#42585b;font-size:14px;line-height:1.55}.rp-price-notes p{margin:8px 0}.rp-price-notes b{color:#0d4741}.rp-reassurance{display:block;position:relative;z-index:1;margin-top:23px;color:#5b757a;font-size:13px}
+@media(max-width:900px){.rp-benefit-grid{grid-template-columns:repeat(2,1fr)}.rp-partner-copy{margin-top:-20px}.rp-pricing-table{overflow-x:auto}.rp-pricing-table-head,.rp-pricing-row{min-width:850px}}
+@media(max-width:760px){.rp-benefit-grid{grid-template-columns:1fr;margin-top:40px}.rp-partner-copy{font-size:14px;margin-top:-12px}.rp-stats small{font-size:9px}.rp-pricing-table{margin-top:40px}.rp-price-notes{font-size:13px}.rp-solution-grid>article .text-link{margin-top:16px}}
+.rp-hero .rp-actions{align-items:center;gap:16px}
+.rp-hero .rp-actions .rp-arrow{position:relative;font-size:0}
+.rp-hero .rp-actions .rp-arrow::before{content:'';position:absolute;width:24.19px;height:2px;background:currentColor;border-radius:2px}
+.rp-hero .rp-actions .rp-arrow::after{content:'';position:absolute;width:10.5px;height:10.5px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:translateX(6px) rotate(45deg);border-radius:1px}
+.rp-hero .rp-primary,.rp-hero .rp-secondary{padding-top:0;padding-bottom:0;font-family:'DM Sans',Arial,sans-serif;font-size:20px;font-weight:400;line-height:160%;justify-content:space-between;border-radius:33.58px}
+.rp-hero .rp-primary{width:275.87px;height:68px;flex:0 0 275.87px;padding-left:40px;padding-right:11px}
+.rp-hero .rp-secondary{width:234px;height:67px;flex:0 0 234px;padding-left:48px;padding-right:13px;border:1px solid rgba(0,0,0,.1)}
+.rp-hero .rp-actions .rp-arrow{width:44px;height:44px;flex:0 0 44px}
+.rp-hero-device{position:absolute;z-index:2;top:58px;left:42px;width:665px;aspect-ratio:2940/2118}
+.rp-hero-device-frame{position:absolute;z-index:1;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.rp-hero-device .rp-hero-dashboard-image{position:absolute;z-index:2;top:5.9%;left:5%;width:90%;height:88%;max-width:none;object-fit:cover;object-position:center;border-radius:4.3%;clip-path:none;transform:none}
+.rp-hero .rp-stats{display:grid;grid-template-columns:max-content max-content max-content;align-items:start;margin-top:54px}
+.rp-hero .rp-stats>div{min-height:102px;padding:0 28px;border-right:2px solid #d2d2d2}
+.rp-hero .rp-stats>div:first-child{padding-left:0}
+.rp-hero .rp-stats>div:last-child{padding-right:0;border-right:0}
+.rp-hero .rp-stats strong{font-size:48px;font-weight:500;line-height:1;letter-spacing:-1.5px}
+.rp-hero .rp-stats span{margin-top:14px;color:#12afe5;font-size:20px;font-weight:400;line-height:1.15;white-space:nowrap}
+.rp-hero .rp-stats small{max-width:180px;margin-top:8px;color:#66747a;font-size:11px;line-height:1.35}
+.rp-hero{padding-bottom:96px}
+@media(max-width:1250px){.rp-hero .rp-stats>div{padding-inline:20px}.rp-hero .rp-stats strong{font-size:40px}.rp-hero .rp-stats span{font-size:17px}.rp-hero .rp-stats small{max-width:145px;font-size:10px}}
+@media(max-width:1100px){.rp-hero{padding-bottom:82px}}
+@media(max-width:760px){.rp-hero{padding-bottom:64px}.rp-hero .rp-primary,.rp-hero .rp-secondary{width:100%;height:58px;flex-basis:auto;padding-left:24px;padding-right:7px;font-size:18px}.rp-hero .rp-actions .rp-arrow{width:44px;height:44px;flex-basis:44px}.rp-hero-device{top:42px;left:50%;width:540px;transform:translateX(-50%)}.rp-hero .rp-stats{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;margin-top:44px}.rp-hero .rp-stats>div{min-width:0;min-height:90px;padding-inline:10px}.rp-hero .rp-stats strong{font-size:28px;letter-spacing:-.5px}.rp-hero .rp-stats span{margin-top:10px;font-size:11px;white-space:normal}.rp-hero .rp-stats small{font-size:8px;line-height:1.3}}
+@media(max-width:1499px) and (min-width:900px){
+  .rp-container{width:81.5%}
+  .rp-header{height:82px}
+  .rp-logo{width:180px}
+  .rp-logo img{width:164px;height:52px}
+  .rp-nav{gap:34px}
+  .rp-nav nav{gap:38px}
+  .rp-nav nav>a,.rp-products-menu>button{font-size:13px}
+  .rp-desktop-demo{width:143px;min-width:143px;height:38px;padding:5px 7px 5px 20px;gap:8px;font-size:13px;transform:translateX(27px)}
+  .rp-desktop-demo .rp-arrow{width:26px;height:26px;font-size:17px}
+  .rp-hero{min-height:620px;padding-bottom:40px}
+  .rp-hero-inner{position:relative;grid-template-columns:minmax(0,48%) minmax(0,52%);gap:10px;padding-top:80px}
+  .rp-hero-inner::after{content:'';position:absolute;z-index:0;left:0;bottom:-24px;width:74px;height:74px;background:radial-gradient(circle,#62c8e5 2.5px,transparent 3.5px) 0 0/23px 23px;pointer-events:none}
+  .rp-pill{padding:5px 6px 5px 27px;font-size:12px}
+  .rp-pill .rp-arrow{width:27px;height:25px;margin-left:22px;font-size:17px}
+  .rp-hero h1{width:500px;max-width:none;margin:14px 0 30px;font-size:38px;line-height:1.1;letter-spacing:-1.5px}
+  .rp-hero-copy>p{max-width:430px;font-size:13px;line-height:1.48}
+  .rp-hero .rp-actions{gap:11px;margin-top:28px}
+  .rp-hero .rp-primary,.rp-hero .rp-secondary{font-size:13px;line-height:1;border-radius:22px}
+  .rp-hero .rp-primary{width:176px;min-width:0;height:44px;flex-basis:176px;padding-left:25px;padding-right:7px}
+  .rp-hero .rp-secondary{width:149px;min-width:0;height:43px;flex-basis:149px;padding-left:31px;padding-right:8px}
+  .rp-hero .rp-actions .rp-arrow{width:28px;height:28px;flex-basis:28px}
+  .rp-hero .rp-actions .rp-arrow::before{width:15px;height:1.5px}
+  .rp-hero .rp-actions .rp-arrow::after{width:7px;height:7px;border-width:1.5px;transform:translateX(4px) rotate(45deg)}
+  .rp-trust-line{margin-top:8px!important;font-size:10px!important;line-height:1.3!important}
+  .rp-hero .rp-stats{margin-top:26px}
+  .rp-hero .rp-stats>div{min-height:70px;padding-inline:18px}
+  .rp-hero .rp-stats strong{font-size:30px;letter-spacing:-.7px}
+  .rp-hero .rp-stats span{margin-top:9px;font-size:14px}
+  .rp-hero .rp-stats small{max-width:140px;margin-top:5px;font-size:8.5px}
+  .rp-hero-art{width:121%;height:500px;transform:scale(.82);transform-origin:left top}
+  .rp-hero-device{top:6px;left:66px;width:581px}
+  .rp-score{top:162px;left:17px;transform:scale(.76);transform-origin:left top}
+  .rp-payment{top:106px;right:-17.5%;transform:scale(.7);transform-origin:right top}
+  .rp-art-circle.one{right:-15%;width:128px;height:128px}
+  .rp-art-circle.two{left:-31px;width:270px;height:270px;bottom:-20px}
+  .rp-dot-grid{left:52px;width:90px;height:90px;bottom:54px}
+}

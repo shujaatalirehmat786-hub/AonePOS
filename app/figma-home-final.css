@@ -1,0 +1,143 @@
+/* Authoritative Aone POS-1 layer. The Figma homepage is a 1920px frame. */
+:root{--rp-figma-blue:#10afe3;--rp-figma-green:#27e99c;--rp-figma-gradient:linear-gradient(102deg,var(--rp-figma-blue),var(--rp-figma-green))}
+.rp-page .rp-container{width:calc(100% - clamp(64px,14.85vw,304px))}
+.rp-page .rp-header,.rp-page .rp-hero{background:#e6f8fd}
+
+/* Header: 181px source-frame inset and 190px header band. */
+.rp-page .rp-header{height:clamp(82px,6.35vw,130px)}
+.rp-page .rp-nav{position:relative;gap:clamp(28px,3.1vw,60px)}
+.rp-page .rp-logo{width:clamp(170px,13.25vw,254px)}
+.rp-page .rp-logo img{width:clamp(170px,13.25vw,254px);height:auto;object-fit:contain;filter:contrast(1.8) saturate(1.08) brightness(1.02)}
+.rp-page .rp-nav nav{gap:clamp(22px,2.25vw,43px);transform:translateY(-2px)}
+.rp-page .rp-nav nav>a,.rp-page .rp-products-menu>button{padding:0;color:#080a0c;font-size:clamp(12px,.94vw,18px);line-height:1}
+.rp-page .rp-products-menu>button{color:#09aae5}
+.rp-page .rp-products-menu>div{top:clamp(30px,2.2vw,42px);left:-2px;width:clamp(183px,14.85vw,285px);padding:clamp(10px,.78vw,15px);border-radius:8px;opacity:1;visibility:visible;transform:none;box-shadow:0 12px 30px rgba(43,127,154,.13)}
+.rp-page .rp-products-menu>div a{height:clamp(38px,2.97vw,57px);gap:clamp(11px,.94vw,18px);padding:0 clamp(11px,.89vw,17px);border-radius:7px;font-size:clamp(12px,.94vw,18px)}
+.rp-page .rp-products-menu i{width:clamp(18px,1.41vw,27px);height:clamp(18px,1.41vw,27px)}
+.rp-page .rp-products-menu i.mobile{width:clamp(10px,.78vw,15px);margin-inline:clamp(4px,.31vw,6px)}
+
+/* Shared Figma CTA treatment. */
+.rp-page .rp-demo,.rp-page .rp-primary,.rp-page .rp-secondary,.rp-page .rp-plan-top a{box-sizing:border-box;display:inline-flex;align-items:center;font-family:'DM Sans',Arial,sans-serif;font-weight:400;line-height:1;text-decoration:none;white-space:nowrap;transition:transform .18s ease,box-shadow .18s ease}
+.rp-page .rp-demo,.rp-page .rp-primary,.rp-page .rp-plan-top a{background:var(--rp-figma-gradient)}
+.rp-page .rp-secondary{background:#fff;border:1px solid rgba(0,0,0,.1)}
+.rp-page .rp-demo:hover,.rp-page .rp-primary:hover,.rp-page .rp-secondary:hover,.rp-page .rp-plan-top a:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(26,177,195,.2)}
+.rp-page .rp-demo:focus-visible,.rp-page .rp-primary:focus-visible,.rp-page .rp-secondary:focus-visible,.rp-page .rp-plan-top a:focus-visible{outline:3px solid rgba(16,175,227,.28);outline-offset:3px}
+.rp-page .rp-demo .rp-arrow,.rp-page .rp-actions .rp-arrow{position:relative;flex:none;display:grid;place-items:center;font-size:0}
+.rp-page .rp-demo .rp-arrow::before,.rp-page .rp-actions .rp-arrow::before{content:'';position:absolute;width:52%;height:2px;border-radius:2px;background:currentColor}
+.rp-page .rp-demo .rp-arrow::after,.rp-page .rp-actions .rp-arrow::after{content:'';position:absolute;width:23%;height:23%;border-top:2px solid currentColor;border-right:2px solid currentColor;border-radius:1px;transform:translateX(30%) rotate(45deg)}
+.rp-page .rp-desktop-demo{min-width:clamp(150px,11.72vw,225px);height:clamp(41px,3.18vw,61px);justify-content:space-between;gap:12px;padding:clamp(5px,.42vw,8px) clamp(6px,.47vw,9px) clamp(5px,.42vw,8px) clamp(20px,1.56vw,30px);border-radius:999px;font-size:clamp(12px,.94vw,18px)}
+.rp-page .rp-desktop-demo .rp-arrow{width:clamp(29px,2.24vw,43px);height:clamp(29px,2.24vw,43px)}
+
+/* Hero source positions: pill y253, heading y341, artwork y274, stats y779. */
+.rp-page .rp-hero{min-height:clamp(620px,46vw,884px);padding:0;overflow:hidden}
+.rp-page .rp-hero-inner{position:relative;display:block;height:clamp(620px,46vw,884px);padding-top:clamp(70px,5.86vw,120px)}
+.rp-page .rp-hero-copy{position:relative;z-index:5;width:clamp(590px,46.2vw,887px);padding:0;text-align:left}
+.rp-page .rp-pill{width:clamp(205px,16.04vw,308px);height:clamp(38px,2.97vw,57px);padding:0 clamp(6px,.47vw,9px) 0 clamp(25px,1.98vw,38px);border:1px solid #43b8de;border-radius:999px;background:#fff;font-size:clamp(11px,.89vw,17px);line-height:1;white-space:nowrap}
+.rp-page .rp-pill .rp-arrow{width:clamp(27px,2.08vw,40px);height:clamp(21px,1.62vw,31px);margin-left:auto;font-size:0}
+.rp-page .rp-pill .rp-arrow::before{content:'→';font-size:clamp(16px,1.15vw,22px)}
+.rp-page .rp-hero h1{width:clamp(590px,46.2vw,887px);max-width:none;margin:clamp(35px,2.3vw,47px) 0 clamp(28px,2.1vw,40px);font-size:clamp(46px,3.59vw,69px);font-weight:600;line-height:.94;letter-spacing:clamp(-2.8px,-.15vw,-1.8px)}
+.rp-page .rp-hero-copy>p{width:clamp(410px,32vw,615px);max-width:none;margin:0;color:#666f74;font-size:clamp(13px,.94vw,18px);line-height:1.58}
+.rp-page .rp-hero .rp-actions{align-items:center;justify-content:flex-start;gap:clamp(11px,.83vw,16px);margin-top:clamp(36px,2.3vw,47px)}
+.rp-page .rp-hero .rp-primary,.rp-page .rp-hero .rp-secondary{justify-content:space-between;padding-top:0;padding-bottom:0;border-radius:999px;font-size:clamp(13px,1.04vw,20px)}
+.rp-page .rp-hero .rp-primary{width:clamp(216px,16.9vw,324px);height:clamp(45px,3.54vw,68px);flex:0 0 clamp(216px,16.9vw,324px);padding-left:clamp(22px,1.72vw,33px);padding-right:clamp(7px,.57vw,11px)}
+.rp-page .rp-hero .rp-secondary{width:clamp(194px,15.16vw,291px);height:clamp(45px,3.49vw,67px);flex:0 0 clamp(194px,15.16vw,291px);padding-left:clamp(23px,1.82vw,35px);padding-right:clamp(9px,.68vw,13px)}
+.rp-page .rp-hero .rp-actions .rp-arrow{width:clamp(30px,2.29vw,44px);height:clamp(30px,2.29vw,44px)}
+
+.rp-page .rp-trust-line{width:auto;max-width:none;margin:clamp(11px,.83vw,16px) 0 0!important;color:#53666c!important;font-size:clamp(9px,.68vw,13px)!important;line-height:1.3!important}
+.rp-page .rp-hero .rp-stats{display:grid;grid-template-columns:max-content max-content max-content;justify-content:start;margin-top:clamp(28px,2.2vw,42px)}
+.rp-page .rp-hero .rp-stats>div{min-height:clamp(68px,5.31vw,102px);padding:0 clamp(18px,1.46vw,28px);border-right:2px solid #d2d2d2}
+.rp-page .rp-hero .rp-stats>div:first-child{padding-left:0}
+.rp-page .rp-hero .rp-stats>div:last-child{padding-right:0;border-right:0}
+.rp-page .rp-hero .rp-stats strong{font-size:clamp(32px,2.5vw,48px);font-weight:500;line-height:1;letter-spacing:-1px}
+.rp-page .rp-hero .rp-stats span{margin-top:clamp(9px,.73vw,14px);color:#12afe5;font-size:clamp(13px,1.04vw,20px);line-height:1.1;white-space:nowrap}
+.rp-page .rp-hero .rp-stats small{display:block;max-width:180px;margin-top:6px;color:#66747a;font-size:clamp(10px,.63vw,12px);line-height:1.35}
+
+/* Supplied Figma dashboard composite plus the two overhanging live cards. */
+.rp-page .rp-hero-art{position:absolute;z-index:2;top:clamp(140px,8.15vw,167px);left:clamp(520px,38.1vw,780px);width:clamp(540px,42.2vw,810px);height:clamp(390px,30.2vw,580px);margin:0;isolation:isolate;transform:none;transform-origin:left top}
+.rp-page .rp-hero-art>.rp-hero-dashboard-image{position:absolute;z-index:2;top:0;left:0;display:block;width:clamp(480px,36.62vw,750px);max-width:none;height:auto;clip-path:inset(3px);transform:none}
+.rp-page .rp-art-circle.one{top:clamp(-38px,-1.95vw,-25px);right:clamp(5px,.52vw,10px);width:clamp(108px,8.54vw,164px);height:clamp(108px,8.54vw,164px)}
+.rp-page .rp-art-circle.two{top:clamp(210px,16.4vw,315px);bottom:auto;left:clamp(-125px,-6.5vw,-83px);width:clamp(245px,16.1vw,330px);height:clamp(245px,16.1vw,330px)}
+.rp-page .rp-dot-grid{top:clamp(315px,24.7vw,474px);bottom:auto;left:clamp(-35px,-1.82vw,-23px);width:clamp(88px,6.88vw,132px);height:clamp(88px,6.88vw,132px)}
+.rp-page .rp-score{top:clamp(117px,9.12vw,175px);left:clamp(-82px,-4.27vw,-55px);transform:scale(.72);transform-origin:left top;z-index:4}
+.rp-page .rp-payment{top:clamp(60px,4.69vw,90px);right:auto;left:clamp(429px,33.5vw,643px);transform:scale(.72);transform-origin:left top;z-index:4}
+.rp-page .rp-hero-inner::after{content:'';position:absolute;left:0;top:clamp(535px,39.5vw,758px);width:clamp(74px,5.73vw,110px);height:clamp(74px,5.73vw,110px);background:radial-gradient(circle,#62c8e5 2.8px,transparent 3.8px) 0 0/23px 23px;pointer-events:none}
+
+/* Other homepage Figma buttons use the same component geometry. */
+.rp-page .rp-cta .rp-actions{justify-content:center;gap:16px}
+.rp-page .rp-cta .rp-primary,.rp-page .rp-cta .rp-secondary{justify-content:space-between;height:68px;min-width:292px;padding:0 11px 0 34px;border-radius:999px;font-size:18px}
+.rp-page .rp-cta .rp-arrow{width:44px;height:44px}
+.rp-page .rp-plan-top a{justify-content:center;width:175px;height:48px;padding:0 24px;border-radius:999px;color:#fff;font-size:16px}
+.rp-page .featured .rp-plan-top a{color:#111;background:#fff}
+.rp-page .rp-plan-top strong{margin-bottom:18px}
+.rp-page .rp-plan-top p{min-height:44px;margin:0 0 24px;color:#66747a;font-size:13px;line-height:1.45}
+.rp-page .featured .rp-plan-top p{color:#efffff}
+.rp-page .rp-footer-logo{filter:none}
+.rp-page .rp-footer-tagline{display:block;margin:22px auto 0;color:#fff;font-size:16px}
+.rp-page .rp-footer-seo{display:block;margin-top:14px;color:#eaffff;font-size:14px}
+.rp-page .rp-footer-contact p{display:flex;align-items:flex-start;gap:14px}
+.rp-page .rp-footer-contact p img{width:24px;height:24px;object-fit:contain;flex:none}
+.rp-page .rp-toggle .active,.rp-page .rp-faq-list button.active>span{background:var(--rp-figma-gradient)}
+
+@media(max-width:899px){
+  .rp-page .rp-container{width:min(920px,calc(100% - 40px))}
+  .rp-page .rp-header{height:88px}.rp-page .rp-logo{width:auto}.rp-page .rp-logo img{width:190px;height:60px}.rp-page .rp-desktop-demo{display:none}
+  .rp-page .rp-hero{min-height:0}.rp-page .rp-hero-inner{height:auto;padding:62px 0 70px}.rp-page .rp-hero-copy{width:100%;text-align:center}
+  .rp-page .rp-pill{width:auto;height:auto;padding:7px 8px 7px 24px}.rp-page .rp-hero h1{width:auto;max-width:720px;margin:25px auto 22px;font-size:clamp(42px,7vw,60px);line-height:1.03}
+  .rp-page .rp-hero-copy>p{width:auto;max-width:620px;margin-inline:auto;font-size:15px}.rp-page .rp-hero .rp-actions{justify-content:center;margin-top:30px}.rp-page .rp-hero .rp-stats{justify-content:center;margin-top:46px}
+  .rp-page .rp-hero-art{position:relative;top:auto;left:auto;width:min(760px,100%);height:520px;margin:38px auto 0}.rp-page .rp-hero-art>.rp-hero-dashboard-image{top:30px;left:50%;width:min(665px,92vw);transform:translateX(-50%)}
+  .rp-page .rp-score{top:190px;left:0;transform:scale(.72)}.rp-page .rp-payment{top:150px;left:auto;right:-10px;transform:scale(.72)}
+  .rp-page .rp-art-circle.one{top:0;right:0;width:120px;height:120px}.rp-page .rp-art-circle.two{top:245px;left:0;width:265px;height:265px}.rp-page .rp-dot-grid{top:360px;left:65px;width:90px;height:90px}.rp-page .rp-hero-inner::after{display:none}
+}
+@media(max-width:760px){
+  .rp-page .rp-container{width:calc(100% - 32px)}.rp-page .rp-hero-inner{padding-top:50px}.rp-page .rp-hero h1{font-size:42px}
+  .rp-page .rp-hero .rp-actions,.rp-page .rp-cta .rp-actions{flex-direction:column;gap:12px}
+  .rp-page .rp-hero .rp-primary,.rp-page .rp-hero .rp-secondary,.rp-page .rp-cta .rp-primary,.rp-page .rp-cta .rp-secondary{width:100%;height:58px;flex-basis:auto;min-width:0;padding-left:24px;padding-right:7px;font-size:17px}
+  .rp-page .rp-hero .rp-stats{grid-template-columns:repeat(3,minmax(0,1fr));width:100%}.rp-page .rp-hero .rp-stats>div{min-width:0;padding-inline:10px}.rp-page .rp-hero .rp-stats strong{font-size:28px}.rp-page .rp-hero .rp-stats span{font-size:11px;white-space:normal}
+  .rp-page .rp-hero-art{height:340px}.rp-page .rp-hero-art>.rp-hero-dashboard-image{top:25px;width:430px}.rp-page .rp-score{top:145px;left:-8px;transform:scale(.48)}.rp-page .rp-payment{top:105px;right:-12px;transform:scale(.48)}.rp-page .rp-art-circle.two{top:155px;left:-25px;width:190px;height:190px}.rp-page .rp-dot-grid{top:235px;left:22px;width:75px;height:75px}
+}
+
+@media(min-width:900px){
+  .rp-page .rp-logo img{mix-blend-mode:multiply}
+  .rp-page .rp-dot-grid,.rp-page .rp-hero-inner::after{display:none}
+  .rp-page .rp-hero-copy>p{width:clamp(560px,30vw,615px)}
+  .rp-page .rp-hero .rp-actions{gap:clamp(16px,1.08vw,22px);margin-top:clamp(30px,1.8vw,37px)}
+  .rp-page .rp-hero .rp-primary{width:clamp(280px,18vw,370px);flex-basis:clamp(280px,18vw,370px)}
+  .rp-page .rp-hero .rp-secondary{width:clamp(240px,15vw,307px);flex-basis:clamp(240px,15vw,307px)}
+  .rp-page .rp-hero .rp-stats{margin-top:clamp(60px,4.3vw,88px)}
+  .rp-page .rp-hero .rp-stats small{display:none}
+  .rp-page .rp-payment{top:clamp(120px,8.4vw,172px);left:clamp(350px,29.1vw,596px);transform:scale(1.18)}
+}
+
+/* Products menu: closed until the user hovers, focuses, or opens Products. */
+.rp-page .rp-products-menu>div{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity .18s ease,visibility .18s ease,transform .18s ease}
+.rp-page .rp-products-menu:hover>div,.rp-page .rp-products-menu:focus-within>div,.rp-page .rp-products-menu.open>div{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.rp-page .rp-products-menu>div a:first-child{background:transparent}
+.rp-page .rp-products-menu>div a:hover,.rp-page .rp-products-menu>div a:focus-visible,.rp-page .rp-products-menu>div a.active{background:#e0f4fa;outline:none}
+.rp-page .rp-products-menu>div a>img{width:29px;height:29px;display:block;flex:0 0 29px;object-fit:contain}
+
+/* Hero artwork assembled from the supplied POS screen, tablet frame and accents. */
+.rp-page .rp-hero-art-composite{overflow:visible}
+.rp-page .rp-hero-device-composite{position:absolute;z-index:3;top:0;left:0;width:100%;aspect-ratio:2940/2118}
+.rp-page .rp-hero-pos-screen{position:absolute;z-index:3;top:5.85%;left:4.85%;width:90.25%;height:88.15%;border-radius:4.2%;object-fit:cover;object-position:center}
+.rp-page .rp-hero-tablet-model{position:absolute;z-index:2;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.rp-page .rp-hero-ellipse{position:absolute;z-index:0;display:block;height:auto;opacity:.12;pointer-events:none}
+.rp-page .rp-hero-ellipse-large{top:34%;left:-13%;width:45%}
+.rp-page .rp-hero-ellipse-small{top:-12%;right:-4%;width:22%}
+.rp-page .rp-hero-dots-image{position:absolute;z-index:1;left:-3%;bottom:4%;display:block;width:14%;height:auto;opacity:.35;pointer-events:none}
+.rp-page .rp-hero-payment-image{position:absolute;z-index:5;top:22%;right:-10%;display:block;width:40%;height:auto;filter:drop-shadow(0 12px 20px rgba(20,84,122,.11));pointer-events:none}
+
+@media(max-width:899px){
+  .rp-page .rp-hero-art-composite{height:min(550px,72vw)}
+  .rp-page .rp-hero-device-composite{top:0;left:50%;width:min(760px,100%);transform:translateX(-50%)}
+  .rp-page .rp-hero-ellipse-large{left:-2%;top:31%}.rp-page .rp-hero-ellipse-small{right:0;top:-8%}
+  .rp-page .rp-hero-dots-image{left:4%;bottom:3%}
+  .rp-page .rp-hero-payment-image{top:23%;right:-2%;width:32%}
+}
+
+@media(max-width:760px){
+  .rp-page .rp-hero-art-composite{height:300px;margin-top:34px}
+  .rp-page .rp-hero-device-composite{top:8px;width:430px}
+  .rp-page .rp-hero-payment-image{top:27%;right:-9%;width:41%}
+  .rp-page .rp-hero-ellipse-large{top:35%;left:-10%;width:50%}.rp-page .rp-hero-ellipse-small{top:-4%;right:-5%;width:25%}
+  .rp-page .rp-hero-dots-image{left:0;bottom:0;width:18%}
+}
