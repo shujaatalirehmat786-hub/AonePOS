@@ -14,7 +14,7 @@ import "./figma-home-final.css";
 import "./frame-pages.css";
 import "./home-frame.css";
 
-export const metadata: Metadata = { title: "AOne POS — Retail & Restaurant Point of Sale", description: "Checkout, inventory, purchase orders, kitchen display and digital menu boards in one POS system, with no hardware lock-in or payment-processing markup." };
+export const metadata: Metadata = { title: "AOne POS — Retail & Quick-Service Restaurant Point of Sale", description: "Checkout, inventory, purchase orders, kitchen display and digital menu boards in one POS system, with no hardware lock-in or payment-processing markup." };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body>{children}</body></html>;
