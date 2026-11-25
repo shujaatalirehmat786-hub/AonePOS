@@ -1,5 +1,5 @@
-export const PHONE_DISPLAY = "+1 866-882-4292";
-export const PHONE_HREF = "tel:+18668824292";
+export const PHONE_DISPLAY = "+1 800-506-1022";
+export const PHONE_HREF = "tel:+18005061022";
 export const CONTACT_EMAIL = "info@aonepos.com";
 
 // Single source of truth for plans so the homepage and /pricing always show the same entitlements, in the same order.

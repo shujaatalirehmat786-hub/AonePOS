@@ -49,7 +49,7 @@ export default function LeadForm({ type, title, submitLabel }: { type: LeadType;
       form.reset();
       setStatus({ state: "success", message: SUCCESS[type] });
     } catch (error) {
-      setStatus({ state: "error", message: (error instanceof Error && error.message) || "We could not send your request. Please email info@aonepos.com or call +1 866-882-4292." });
+      setStatus({ state: "error", message: (error instanceof Error && error.message) || "We could not send your request. Please email info@aonepos.com or call +1 800-506-1022." });
     }
   };
 

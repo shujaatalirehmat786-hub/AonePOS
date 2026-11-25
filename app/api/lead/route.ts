@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 const LEAD_TYPES = { contact: "Contact enquiry", demo: "Demo request", trial: "Free trial signup" } as const;
 type LeadType = keyof typeof LEAD_TYPES;
 
-const FALLBACK = "We could not send your request. Please email info@aonepos.com or call +1 866-882-4292.";
+const FALLBACK = "We could not send your request. Please email info@aonepos.com or call +1 800-506-1022.";
 const MIN_FILL_MS = 3000;
 const RATE_LIMIT = 5;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
